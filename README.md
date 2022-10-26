@@ -2,7 +2,7 @@
 
 <p align="center">
     <br>
-    <img src="./pics/banner.png" width="500"/>
+    <img src="./pics/banner.png" width="400"/>
     <br>
 </p>
 <p align="center">
@@ -10,6 +10,7 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/LERT.svg?color=blue&style=flat-square">
     </a>
 </p>
+
 
 
 A short description will be added (TBA).
@@ -45,11 +46,11 @@ TBA
 
 - TensorFlow开源模型包含**完整权重**，包括MLM-head、linguistic-heads等。
 
-| 模型简称                           | Layers | 隐层大小 |          注意力头          |          参数量        | Google下载 |                          百度盘下载                          |
+| 模型简称                           | 层数 | 隐层大小 |          注意力头          |          参数量        | Google下载 |                          百度盘下载                          |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large**        | 24 | 1024 |  16  |  330M  |   [TensorFlow]   | [TensorFlow]<br/>（密码：） |
-| **Chinese-LERT-base**         | 12 | 768 |  12  |  110M   |   [TensorFlow]   | [TensorFlow]<br/>（密码：） |
-| **Chinese-LERT-small** | 12 | 256 | 4 | 12M  |  [TensorFlow]   | [TensorFlow]<br/>（密码：） |
+| **Chinese-LERT-large**        | 24 | 1024 |  16  |  330M  |   [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>（密码：s82t） |
+| **Chinese-LERT-base**         | 12 | 768 |  12  |  110M   |   [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
+| **Chinese-LERT-small** | 12 | 256 | 4 | 12M  |  [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing)  | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
 
 > *训练语料：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
 
@@ -181,6 +182,9 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | PERT-base |96.2 (96.0)|96.1 (95.8)|
 | **LERT-base** |**96.3 (96.0)**|**96.3 (96.0)**|
 
+
+#### 小模型效果
+TBA
 
 ## FAQ
 **Q1: 为什么PyTorch版本不包含linguistic heads?**  
