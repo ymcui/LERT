@@ -1,24 +1,18 @@
 [**中文**](https://github.com/ymcui/LERT) | [**English**](https://github.com/ymcui/LERT/blob/main/README_EN.md)
 
-# LERT
+<p align="center">
+    <br>
+    <img src="./pics/banner.png" width="500"/>
+    <br>
+</p>
+<p align="center">
+    <a href="https://github.com/ymcui/LERT/blob/main/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/LERT.svg?color=blue&style=flat-square">
+    </a>
+</p>
 
-LERT: A Linguistically-motivated Pre-trained Language Model (tentative)
 
-## News
-
-Something is on the way. Stay tuned and check back later.
-
-**Tentative schedule:**
-
-Update readme doc: late Oct, 2022
-
-Release description paper: early Nov, 2022
-
-Release pre-trained models (direct download): late Oct, 2022
-
-Release pre-trained models (via huggingface): early Nov, 2022
-
-Release pre-training scripts: late Nov - early Dec, 2022
+A short description will be added (TBA).
 
 ----
 
@@ -53,9 +47,9 @@ TBA
 
 | 模型简称                           | Layers | 隐层大小 |          注意力头          |          参数量        | Google下载 |                          百度盘下载                          |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large**        | 24 | 1024 |  16  |  330M  |   [TensorFlow]   | [TensorFlow（密码：）] |
-| **Chinese-LERT-base**         | 12 | 768 |  12  |  110M   |   [TensorFlow]   | [TensorFlow（密码：）] |
-| **Chinese-LERT-small** | 12 | 256 | 4 | 12M  |  [TensorFlow]   | [TensorFlow（密码：）] |
+| **Chinese-LERT-large**        | 24 | 1024 |  16  |  330M  |   [TensorFlow]   | [TensorFlow]<br/>（密码：） |
+| **Chinese-LERT-base**         | 12 | 768 |  12  |  110M   |   [TensorFlow]   | [TensorFlow]<br/>（密码：） |
+| **Chinese-LERT-small** | 12 | 256 | 4 | 12M  |  [TensorFlow]   | [TensorFlow]<br/>（密码：） |
 
 > *训练语料：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
 
@@ -102,33 +96,98 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | Chinese-LERT-small | hfl/chinese-lert-small |
 
 ## 基线系统效果
-以下仅列举部分实验结果。详细结果和分析见论文。实验结果表格中，括号外为最大值，括号内为平均值。
-
-### 中文任务
-
-在以下10个任务上进行了效果测试。
-
+论文中在以下10个任务上进行了效果测试。GitHub目录中仅显示其中一部分，完整结果请参考论文。
 - **抽取式阅读理解**（2）：[CMRC 2018（简体中文）](https://github.com/ymcui/cmrc2018)、[DRCD（繁体中文）](https://github.com/DRCKnowledgeTeam/DRCD)
 - **文本分类**（6）：
   - **单句**（2）：[ChnSentiCorp](https://github.com/pengming617/bert_classification)、[TNEWS](https://github.com/CLUEbenchmark/CLUE)
   - **句对**（4）：[XNLI](https://github.com/google-research/bert/blob/master/multilingual.md)、[LCQMC](http://icrc.hitsz.edu.cn/info/1037/1146.htm)、[BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html)、[OCNLI](https://github.com/CLUEbenchmark/OCNLI)
 - **命名实体识别**（2）：[MSRA-NER]()、[People's Daily（人民日报）]()
 
-#### 阅读理解
+实验结果表格中，
 
-TBA
+1. 括号外为多次finetune最大值，括号内为平均值。
+2. 除*BERT*（即谷歌原版BERT-base）模型外，其余模型均使用同等数据量进行训练。
 
-#### 文本分类
+#### 阅读理解（CMRC 2018）
 
-TBA
+[**CMRC 2018数据集**](https://github.com/ymcui/cmrc2018)是哈工大讯飞联合实验室发布的中文机器阅读理解数据（抽取式），形式与SQuAD相同。（评价指标：EM / F1）
 
-#### 命名实体识别
+| 模型 | 开发集 | 测试集 | 挑战集 |
+| :------- | :---------: | :---------: | :---------: |
+| **↓ 以下为base版本模型** ||||
+| BERT | 65.5 (64.4) / 84.5 (84.0) | 70.0 (68.7) / 87.0 (86.3) | 18.6 (17.0) / 43.3 (41.3) |
+| BERT-wwm-ext | 67.1 (65.6) / 85.7 (85.0) | 71.4 (70.0) / 87.7 (87.0) | 24.0 (20.0) / 47.3 (44.6) |
+| RoBERTa-wwm-ext | 67.4 (66.5) / 87.2 (86.5) | 72.6 (71.4) / 89.4 (88.8) | 26.2 (24.6) / 51.0 (49.1) |
+| MacBERT-base|68.5 (67.3) / 87.9 (87.1)|73.2 (72.4) / 89.5 (89.2)|**30.2** (26.4) / 54.0 (52.2)|
+| PERT-base |68.5 (68.1) / 87.2 (87.1)|72.8 (72.5) / 89.2 (89.0)|28.7 (**28.2**) / 55.4 (53.7)|
+| **LERT-base** |**69.2 (68.4) / 88.1 (87.9)**|**73.5 (72.8) / 89.7 (89.4)**|27.7 (26.7) / **55.9 (54.6)**|
+| **↓ 以下为large版本模型** ||||
+| RoBERTa-wwm-ext-large | 68.5 (67.6) / 88.4 (87.9) | 74.2 (72.4) / 90.6 (90.0) | 31.5 (30.1) / 60.1 (57.5) |
+| MacBERT-base|70.7 (68.6) / 88.9 (88.2)|74.8 (73.2) / 90.7 (90.1)|31.9 (29.6) / 60.2 (57.6)|
+| PERT-base |**72.2 (71.0)** / 89.4 (88.8)|**76.8 (75.5)** / 90.7 (90.4)|**32.3 (30.9)** / 59.2 (58.1)|
+| **LERT-base** |71.2 (70.5) / **89.5 (89.1)**|75.6 (75.1) / **90.9 (90.6)**|32.3 (29.7) / **61.2 (59.2)**|
 
-TBA
+
+#### 单句文本分类（ChnSentiCorp、TNEWS）
+
+以下为情感分类数据集ChnSentiCorp和新闻分类数据集TNEWS结果。（评价指标：Acc）
+| 模型 | ChnSentiCorp-开发集 | TNEWS-开发集 |
+| :------- | :---------: | :---------: |
+| **↓ 以下为base版本模型** |||
+| BERT-wwm-ext | **95.4** (94.6) |57.0 (56.6)|
+| RoBERTa-wwm-ext | 94.9 (94.6) |57.4 (56.9)|
+| MacBERT-base|95.2 (**94.8**)|57.4 (**57.1**)|
+| PERT-base |94.0 (93.7)|56.7 (56.1)|
+| **LERT-base** |94.9 (94.7)|**57.5 (57.1)**|
+| **↓ 以下为large版本模型** |||
+| RoBERTa-wwm-ext-large | **95.8** (94.9) |58.8 (58.4)|
+| MacBERT-base|95.7 (**95.0**)|**59.0 (58.8)**|
+| PERT-base |94.5 (94.0)|57.4 (57.2)|
+| **LERT-base** |95.6 (94.9)|58.7 (58.5)|
+
+#### 句对文本分类（XNLI、OCNLI）
+
+以下为自然语言推断XNLI和OCNLI数据集结果。（评价指标：Acc）
+
+| 模型 | XNLI-开发集 | OCNLI-开发集 |
+| :------- | :---------: | :---------: |
+| **↓ 以下为base版本模型** |||
+| BERT-wwm-ext | 79.4 (78.6) |76.0 (75.3)|
+| RoBERTa-wwm-ext | 80.0 (79.2) |76.5 (76.0)|
+| MacBERT-base|**80.3 (79.7)**|77.0 (76.5)|
+| PERT-base |78.8 (78.1)|75.3 (74.8)|
+| **LERT-base** |80.2 (79.5)|**78.2 (77.5)**|
+| **↓ 以下为large版本模型** |||
+| RoBERTa-wwm-ext-large | 82.1 (81.3) |78.5 (78.2)|
+| MacBERT-base|**82.4 (81.8)**|79.0 (78.7)|
+| PERT-base |81.0 (80.4)|78.1 (77.8)|
+| **LERT-base** |81.7 (81.2)|**79.4 (78.9)**|
+
+#### 命名实体识别（MSRA、PD）
+
+以下为MSRA（测试集）和人民日报数据集（开发集）结果。（评价指标：F值）
+
+| 模型 | MSRA-测试集 | PD-开发集 |
+| :------- | :---------: | :---------: |
+| **↓ 以下为base版本模型** |||
+| BERT-wwm-ext | 95.3 (94.9) |95.3 (95.1)|
+| RoBERTa-wwm-ext | 95.5 (95.1) |95.1 (94.9)|
+| MacBERT-base|95.3 (95.1)|95.2 (94.9)|
+| PERT-base |95.6 (95.3)|95.3 (95.1)|
+| **LERT-base** |**95.7 (95.4)**|**95.6 (95.4)**|
+| **↓ 以下为large版本模型** |||
+| RoBERTa-wwm-ext-large | 95.5 (95.5) |95.7 (95.4)|
+| MacBERT-base|96.2 (95.9)|95.8 (95.7)|
+| PERT-base |96.2 (96.0)|96.1 (95.8)|
+| **LERT-base** |**96.3 (96.0)**|**96.3 (96.0)**|
 
 
 ## FAQ
-TBA
+**Q1: 为什么PyTorch版本不包含linguistic heads?**  
+A1: PyTorch版本模型由TF原版转换而来。为了可以直接使用bert相关接口读取LERT模型，PyTorch版本中只包含了Transformer+MLM部分的权重。如需完整版本的模型，请下载TF 1.x版本的模型。另外需要说明的是，如需直接在下游任务中使用或者二次预训练的话是不需要linguistic heads这部分权重的。
+
+**Q2:有英文模型供下载吗？**  
+A2: 暂时无计划在英文上训练。
 
 
 ## 引用
