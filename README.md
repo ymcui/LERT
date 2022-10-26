@@ -22,6 +22,8 @@ A short description will be added (TBA).
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
+2022/10/26 **模型下载链接、基线系统效果已更新，欢迎提前下载使用。其余信息待补充。**
+
 2022/10/18 感谢各位的关注，本项目在逐渐完善中。**内容不完整，相关信息待补充完善。**
 
 ## 内容导引
@@ -46,13 +48,15 @@ TBA
 
 - TensorFlow开源模型包含**完整权重**，包括MLM-head、linguistic-heads等。
 
-| 模型简称                           | 层数 | 隐层大小 |          注意力头          |          参数量        | Google下载 |                          百度盘下载                          |
+| 模型简称                           | 层数 | 隐层大小 |          注意力头          |         参数量        | Google下载 |                          百度盘下载                          |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large**        | 24 | 1024 |  16  |  330M  |   [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>（密码：s82t） |
-| **Chinese-LERT-base**         | 12 | 768 |  12  |  110M   |   [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
-| **Chinese-LERT-small** | 12 | 256 | 4 | 12M  |  [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing)  | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
+| **Chinese-LERT-large**        | 24 | 1024 |  16  |  ~325M  |   [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>（密码：s82t） |
+| **Chinese-LERT-base**         | 12 | 768 |  12  |  ~102M  |   [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
+| **Chinese-LERT-small** | 12 | 256 | 4 | ~15M |  [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing)  | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
 
 > *训练语料：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
+>
+> **参数量：仅统计transformer部分，不包含task head部分的参数量。
 
 以TensorFlow版`Chinese-LERT-base`为例，下载完毕后对zip文件进行解压得到：
 
@@ -74,9 +78,9 @@ chinese_lert_base_L-12_H-768_A-12.zip
 
 | 模型简称 | 模型文件大小 | transformers模型库地址 |
 | :------- | :---------: |  :---------- |
-| **Chinese-LERT-large** | 1.2G | TBA |
-| **Chinese-LERT-base** | ~400M | TBA |
-| **Chinese-LERT-small** | ~60M | TBA |
+| **Chinese-LERT-large** | 1.2G | https://huggingface.co/hfl/chinese-lert-large |
+| **Chinese-LERT-base** | ~400M | https://huggingface.co/hfl/chinese-lert-base |
+| **Chinese-LERT-small** | ~60M | https://huggingface.co/hfl/chinese-lert-small |
 
 ## 快速加载
 由于LERT主体部分仍然是BERT结构，用户可以使用[transformers库](https://github.com/huggingface/transformers)轻松调用LERT模型。
