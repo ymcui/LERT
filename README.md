@@ -138,13 +138,13 @@ model = BertModel.from_pretrained("MODEL_NAME")
 以下为情感分类数据集ChnSentiCorp和新闻分类数据集TNEWS结果。（评价指标：Acc）
 | 模型 | ChnSentiCorp-开发集 | TNEWS-开发集 |
 | :------- | :---------: | :---------: |
-| **↓ 以下为base版本模型** |||
+| **↓ 以下为base模型** |||
 | BERT-wwm-ext | **95.4** (94.6) |57.0 (56.6)|
 | RoBERTa-wwm-ext | 94.9 (94.6) |57.4 (56.9)|
 | MacBERT-base|95.2 (**94.8**)|57.4 (**57.1**)|
 | PERT-base |94.0 (93.7)|56.7 (56.1)|
 | **LERT-base** |94.9 (94.7)|**57.5 (57.1)**|
-| **↓ 以下为large版本模型** |||
+| **↓ 以下为large模型** |||
 | RoBERTa-wwm-ext-large | **95.8** (94.9) |58.8 (58.4)|
 | MacBERT-base|95.7 (**95.0**)|**59.0 (58.8)**|
 | PERT-base |94.5 (94.0)|57.4 (57.2)|
@@ -156,13 +156,13 @@ model = BertModel.from_pretrained("MODEL_NAME")
 
 | 模型 | XNLI-开发集 | OCNLI-开发集 |
 | :------- | :---------: | :---------: |
-| **↓ 以下为base版本模型** |||
+| **↓ 以下为base模型** |||
 | BERT-wwm-ext | 79.4 (78.6) |76.0 (75.3)|
 | RoBERTa-wwm-ext | 80.0 (79.2) |76.5 (76.0)|
 | MacBERT-base|**80.3 (79.7)**|77.0 (76.5)|
 | PERT-base |78.8 (78.1)|75.3 (74.8)|
 | **LERT-base** |80.2 (79.5)|**78.2 (77.5)**|
-| **↓ 以下为large版本模型** |||
+| **↓ 以下为large模型** |||
 | RoBERTa-wwm-ext-large | 82.1 (81.3) |78.5 (78.2)|
 | MacBERT-base|**82.4 (81.8)**|79.0 (78.7)|
 | PERT-base |81.0 (80.4)|78.1 (77.8)|
@@ -174,13 +174,13 @@ model = BertModel.from_pretrained("MODEL_NAME")
 
 | 模型 | MSRA-测试集 | PD-开发集 |
 | :------- | :---------: | :---------: |
-| **↓ 以下为base版本模型** |||
+| **↓ 以下为base模型** |||
 | BERT-wwm-ext | 95.3 (94.9) |95.3 (95.1)|
 | RoBERTa-wwm-ext | 95.5 (95.1) |95.1 (94.9)|
 | MacBERT-base|95.3 (95.1)|95.2 (94.9)|
 | PERT-base |95.6 (95.3)|95.3 (95.1)|
 | **LERT-base** |**95.7 (95.4)**|**95.6 (95.4)**|
-| **↓ 以下为large版本模型** |||
+| **↓ 以下为large模型** |||
 | RoBERTa-wwm-ext-large | 95.5 (95.5) |95.7 (95.4)|
 | MacBERT-base|96.2 (95.9)|95.8 (95.7)|
 | PERT-base |96.2 (96.0)|96.1 (95.8)|
