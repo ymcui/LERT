@@ -11,8 +11,6 @@
     </a>
 </p>
 
-
-
 A short description will be added (TBA).
 
 ----
@@ -76,9 +74,9 @@ chinese_lert_base_L-12_H-768_A-12.zip
 
 下载方法：点击任意需要下载的模型 → 选择"Files and versions"选项卡 → 下载对应的模型文件。
 
-| 模型简称 | 模型文件大小 | transformers模型库地址 |
+| 模型简称 | 模型文件大小 | transformers模型库地址（支持MLM填空交互） |
 | :------- | :---------: |  :---------- |
-| **Chinese-LERT-large** | 1.2G | https://huggingface.co/hfl/chinese-lert-large |
+| **Chinese-LERT-large** | ~1.2G | https://huggingface.co/hfl/chinese-lert-large |
 | **Chinese-LERT-base** | ~400M | https://huggingface.co/hfl/chinese-lert-base |
 | **Chinese-LERT-small** | ~60M | https://huggingface.co/hfl/chinese-lert-small |
 
