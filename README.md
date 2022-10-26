@@ -113,7 +113,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 1. 括号外为多次finetune最大值，括号内为平均值。
 2. 除*BERT*（即谷歌原版BERT-base）模型外，其余模型均使用同等数据量进行训练。
 
-#### 阅读理解（CMRC 2018）
+### 阅读理解（CMRC 2018）
 
 [**CMRC 2018数据集**](https://github.com/ymcui/cmrc2018)是哈工大讯飞联合实验室发布的中文机器阅读理解数据（抽取式），形式与SQuAD相同。（评价指标：EM / F1）
 
@@ -133,7 +133,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | **LERT-base** |71.2 (70.5) / **89.5 (89.1)**|75.6 (75.1) / **90.9 (90.6)**|32.3 (29.7) / **61.2 (59.2)**|
 
 
-#### 单句文本分类（ChnSentiCorp、TNEWS）
+### 单句文本分类（ChnSentiCorp、TNEWS）
 
 以下为情感分类数据集ChnSentiCorp和新闻分类数据集TNEWS结果。（评价指标：Acc）
 | 模型 | ChnSentiCorp-开发集 | TNEWS-开发集 |
@@ -150,7 +150,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | PERT-base |94.5 (94.0)|57.4 (57.2)|
 | **LERT-base** |95.6 (94.9)|58.7 (58.5)|
 
-#### 句对文本分类（XNLI、OCNLI）
+### 句对文本分类（XNLI、OCNLI）
 
 以下为自然语言推断XNLI和OCNLI数据集结果。（评价指标：Acc）
 
@@ -168,7 +168,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | PERT-base |81.0 (80.4)|78.1 (77.8)|
 | **LERT-base** |81.7 (81.2)|**79.4 (78.9)**|
 
-#### 命名实体识别（MSRA、PD）
+### 命名实体识别（MSRA、PD）
 
 以下为MSRA（测试集）和人民日报数据集（开发集）结果。（评价指标：F值）
 
@@ -187,7 +187,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | **LERT-base** |**96.3 (96.0)**|**96.3 (96.0)**|
 
 
-#### 小模型效果
+### 小模型效果
 TBA
 
 ## FAQ
