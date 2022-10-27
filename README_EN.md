@@ -19,7 +19,7 @@ It is generally believed that Pre-trained Language Model (PLM) has the ability t
 
 ----
 
-[Chinese and English PERT](https://github.com/ymcui/PERT) | [Chinese MacBERT](https://github.com/ymcui/MacBERT) | [Chinese ELECTRA](https://github.com/ ymcui/Chinese-ELECTRA) | [Chinese XLNet](https://github.com/ymcui/Chinese-XLNet) | [Chinese BERT](https://github.com/ymcui/Chinese-BERT-wwm) | [ Knowledge distillation tool TextBrewer](https://github.com/airaria/TextBrewer) | [Model cropping tool TextPruner](https://github.com/airaria/TextPruner)
+[Chinese and English PERT](https://github.com/ymcui/PERT) | [Chinese MacBERT](https://github.com/ymcui/MacBERT) | [Chinese ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [Chinese XLNet](https://github.com/ymcui/Chinese-XLNet) | [Chinese BERT](https://github.com/ymcui/Chinese-BERT-wwm) | [ Knowledge distillation tool TextBrewer](https://github.com/airaria/TextBrewer) | [Model pruning tool TextPruner](https://github.com/airaria/TextPruner)
 
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
@@ -30,7 +30,7 @@ View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## Table of Contents
 | Chapter | Description |
-| ------------------------------------- | ----------- ---------------------------- --------------------- |
+| ---------- | ----------- |
 | [Introduction](#Introduction) | Introduction of LERT |
 | [Download](#Download) | Download links for LERT |
 | [QuickLoad](#QuickLoad) | How to use [ 🤗 Transformers](https://github.com/huggingface/transformers) to quickly load models|
@@ -50,7 +50,7 @@ TBA
 - The open-sourced TensorFlow models include **full weights**, including MLM-head, linguistic-heads, etc.
 
 | Model | Layers | Hidden size | Attention head | Params | Google Drive | Baidu Disk |
-| :---------------------------------- | :--: | :-------- -------------: | :------------: | :------------- -----------------------------------: | :------------ --------------------------------------------------------: | :- -------------------------------------------------- -------: |
+| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | **Chinese-LERT-large** | 24 | 1024 | 16 | ~325M | [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp= sharing) | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>(password: s82t) |
 | **Chinese-LERT-base** | 12 | 768 | 12 | ~102M | [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>(password: 9jgi) |
 | **Chinese-LERT-small** | 12 | 256 | 4 | ~15M | [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>(password: 4vuy) |
@@ -103,10 +103,10 @@ The corresponding list of `MODEL_NAME` is as follows:
 
 ## Baselines
 In our paper, the effect is tested on the following 10 tasks. Only some of them are shown in the GitHub directory, please refer to the paper for the full results.
-- **Extractive Reading Comprehension** (2): [CMRC 2018 (Simplified Chinese)](https://github.com/ymcui/cmrc2018), [DRCD (Traditional Chinese)](https://github.com /DRCKnowledgeTeam/DRCD)
+- **Extractive Reading Comprehension** (2): [CMRC 2018 (Simplified Chinese)](https://github.com/ymcui/cmrc2018), [DRCD (Traditional Chinese)](https://github.com/DRCKnowledgeTeam/DRCD)
 - **Text Classification** (6):
   - **Single Sentence** (2): [ChnSentiCorp](https://github.com/pengming617/bert_classification), [TNEWS](https://github.com/CLUEbenchmark/CLUE)
-  - **Sentence pairs** (4): [XNLI](https://github.com/google-research/bert/blob/master/multilingual.md), [LCQMC](http://icrc.hitsz. edu.cn/info/1037/1146.htm), [BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html), [OCNLI](https://github.com /CLUEbenchmark/OCNLI)
+  - **Sentence pairs** (4): [XNLI](https://github.com/google-research/bert/blob/master/multilingual.md), [LCQMC](http://icrc.hitsz.edu.cn/info/1037/1146.htm), [BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html), [OCNLI](https://github.com/CLUEbenchmark/OCNLI)
 
 - **Named Entity Recognition** (2): [MSRA-NER](), [People's Daily]()
 
@@ -197,7 +197,7 @@ TBA
 **Q1: Why doesn't the PyTorch version include linguistic heads?**
 A1: The PyTorch version model is converted from the original TF weights. In order to directly use BERT-related interface to read the LERT model, the PyTorch version only includes the weights of the Transformer+MLM part. For the full version of the model, please download the TF 1.x version of the model. In addition, it should be noted that if you need to use it directly in downstream tasks or perform further pre-training, you do not need the weight of linguistic heads.
 
-**Q2: Is there an English model for download? **
+**Q2: Is there an English model for download? **  
 A2: There is no plan to train in English at the moment.
 
 
