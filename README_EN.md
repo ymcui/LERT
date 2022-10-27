@@ -51,7 +51,7 @@ TBA
 
 | Model | Layers | Hidden size | Attention head | Params | Google Drive | Baidu Disk |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large** | 24 | 1024 | 16 | ~325M | [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp= sharing) | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>(password: s82t) |
+| **Chinese-LERT-large** | 24 | 1024 | 16 | ~325M | [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing) | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>(password: s82t) |
 | **Chinese-LERT-base** | 12 | 768 | 12 | ~102M | [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>(password: 9jgi) |
 | **Chinese-LERT-small** | 12 | 256 | 4 | ~15M | [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>(password: 4vuy) |
 
@@ -194,10 +194,10 @@ The following are the MSRA (test set) and People's Daily dataset (dev set) resul
 TBA
 
 ## FAQ
-**Q1: Why doesn't the PyTorch version include linguistic heads?**
+**Q1: Why doesn't the PyTorch version include linguistic heads?**  
 A1: The PyTorch version model is converted from the original TF weights. In order to directly use BERT-related interface to read the LERT model, the PyTorch version only includes the weights of the Transformer+MLM part. For the full version of the model, please download the TF 1.x version of the model. In addition, it should be noted that if you need to use it directly in downstream tasks or perform further pre-training, you do not need the weight of linguistic heads.
 
-**Q2: Is there an English model for download? **  
+**Q2: Is there an English model for download?**  
 A2: There is no plan to train in English at the moment.
 
 
