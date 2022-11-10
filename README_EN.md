@@ -196,7 +196,14 @@ The following are the MSRA (test set) and People's Daily dataset (dev set) resul
 
 
 ### Results for Small model
-TBA
+| Model                |  CMRC 2018  |    DRCD     | XNLI | LCQMC |  BQ  | CSC  | Param# |
+| :------------------- | :---------: | :---------: | :--: | :---: | :--: | :--: | :----: |
+| RBT3                 | 62.2 / 81.8 | 75.0 / 83.9 | 72.3 | 85.1  | 83.3 | 92.8 |  38M   |
+| ELECTRA-small        | 67.8 / 83.4 | 79.0 / 85.8 | 73.1 | 85.9  | 82.0 | 94.3 |  12M   |
+| ELECTRA-small (180G) | 68.5 / 85.2 | 82.9 / 88.7 | 74.6 | 85.8  | 82.1 | 93.6 |  12M   |
+| LERT-small           | 67.8 / 85.2 | 83.2 / 89.4 | 75.2 | 85.3  | 83.4 | 94.0 |  15M   |
+
+We report test results in this table. Please check our paper for more results.
 
 ## FAQ
 **Q1: Why doesn't the PyTorch version include linguistic heads?**  
