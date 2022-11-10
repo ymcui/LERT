@@ -15,7 +15,8 @@
 It is generally believed that Pre-trained Language Model (PLM) has the ability to automatically learn linguistic knowledge from large-scale text corpora. In order to verify whether the pre-trained language model can be further improved by explicitly injecting linguistic knowledge, in this project, the Joint Laboratory of HIT and iFLYTEK Research  (HFL) proposed <b>a new pre-trained model LERT</b> with enhanced linguistic information, which incorporates a variety of linguistic knowledge. Extensive experimental results show that LERT can bring significant performance improvement under the same training data scale. LERT-related resources will be open-sourced for promoting academic research.
 
 
-- Paper: TBA (expected November 2022)
+- **LERT: A Linguistically-motivated Pre-trained Language Model (links TBA)**
+- *Yiming Cui, Wanxiang Che, Shijin Wang, Ting Liu*
 
 ----
 
@@ -24,6 +25,8 @@ It is generally believed that Pre-trained Language Model (PLM) has the ability t
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
+2022/11/11 Paper has been uploaded to arXiv. Link: TBA
+
 2022/10/26 **Model download links and baseline system results have been updated**. The rest of the information will be added later.
 
 2022/10/18 Thank you for your attention, this project is gradually improving the content.
@@ -40,7 +43,9 @@ View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 
 ## Introduction
-TBA
+Pre-trained Language Model (PLM) has become a representative foundation model in the natural language processing ﬁeld. Most PLMs are trained with linguistic-agnostic pretraining tasks on the surface form of the text, such as the masked language model (MLM). To further empower the PLMs with richer linguistic features, in this paper, we aim to propose a simple but effective way to learn linguistic features for pre-trained language models. We propose LERT, a pre-trained language model that is trained on three types of linguistic features along with the original MLM pretraining task, using a linguistically-informed pre-training (LIP) strategy. We carried out extensive experiments on ten Chinese NLU tasks, and the experimental results show that LERT could bring signiﬁcant improvements over various comparable baselines. Furthermore, we also conduct analytical experiments in various linguistic aspects, and the results prove that the design of LERT is valid and effective.
+
+![](./pics/lert.png)
 
 ## Model download
 
@@ -131,9 +136,9 @@ In the experimental results table,
 | **LERT-base** |**69.2 (68.4) / 88.1 (87.9)**|**73.5 (72.8) / 89.7 (89.4)**|27.7 (26.7) / **55.9 (54.6)** |
 | **↓ large model** ||||
 | RoBERTa-large | 68.5 (67.6) / 88.4 (87.9) | 74.2 (72.4) / 90.6 (90.0) | 31.5 (30.1) / 60.1 (57.5) |
-| MacBERT-base|70.7 (68.6) / 88.9 (88.2)|74.8 (73.2) / 90.7 (90.1)|31.9 (29.6) / 60.2 (57.6)|
-| PERT-base |**72.2 (71.0)** / 89.4 (88.8)|**76.8 (75.5)** / 90.7 (90.4)|**32.3 (30.9)** / 59.2 (58.1)|
-| **LERT-base** |71.2 (70.5) / **89.5 (89.1)**|75.6 (75.1) / **90.9 (90.6)**|32.3 (29.7) / **61.2 (59.2)** |
+| MacBERT-large |70.7 (68.6) / 88.9 (88.2)|74.8 (73.2) / 90.7 (90.1)|31.9 (29.6) / 60.2 (57.6)|
+| PERT-large |**72.2 (71.0)** / 89.4 (88.8)|**76.8 (75.5)** / 90.7 (90.4)|**32.3 (30.9)** / 59.2 (58.1)|
+| **LERT-large** |71.2 (70.5) / **89.5 (89.1)**|75.6 (75.1) / **90.9 (90.6)**|32.3 (29.7) / **61.2 (59.2)** |
 
 
 ### Single sentence text classification (ChnSentiCorp, TNEWS)
@@ -149,9 +154,9 @@ The following are the sentiment classification dataset ChnSentiCorp and news cla
 | **LERT-base** |94.9 (94.7)|**57.5 (57.1)**|
 | **↓ large model** |||
 | RoBERTa-large | **95.8** (94.9) |58.8 (58.4)|
-|MacBERT-base|95.7 (**95.0**)|**59.0 (58.8)**|
-|PERT-base |94.5 (94.0)|57.4 (57.2)|
-| **LERT-base** |95.6 (94.9)|58.7 (58.5)|
+|MacBERT-large|95.7 (**95.0**)|**59.0 (58.8)**|
+|PERT-large |94.5 (94.0)|57.4 (57.2)|
+| **LERT-large** |95.6 (94.9)|58.7 (58.5)|
 
 ### Sentence pair text classification (XNLI, OCNLI)
 
@@ -167,9 +172,9 @@ The following are the results of natural language inference on XNLI and OCNLI da
 | **LERT-base** |80.2 (79.5)|**78.2 (77.5)**|
 | **↓ large model** |||
 | RoBERTa-large | 82.1 (81.3) |78.5 (78.2)|
-|MacBERT-base|**82.4 (81.8)**|79.0 (78.7)|
-|PERT-base |81.0 (80.4)|78.1 (77.8)|
-| **LERT-base** |81.7 (81.2)|**79.4 (78.9)**|
+|MacBERT-large|**82.4 (81.8)**|79.0 (78.7)|
+|PERT-large |81.0 (80.4)|78.1 (77.8)|
+| **LERT-large** |81.7 (81.2)|**79.4 (78.9)**|
 
 ### Named Entity Recognition (MSRA, PD)
 
@@ -185,9 +190,9 @@ The following are the MSRA (test set) and People's Daily dataset (dev set) resul
 | **LERT-base** |**95.7 (95.4)**|**95.6 (95.4)**|
 | **↓ large model** |||
 | RoBERTa-large | 95.5 (95.5) |95.7 (95.4)|
-|MacBERT-base|96.2 (95.9)|95.8 (95.7)|
-|PERT-base |96.2 (96.0)|96.1 (95.8)|
-| **LERT-base** |**96.3 (96.0)**|**96.3 (96.0)**|
+|MacBERT-large|96.2 (95.9)|95.8 (95.7)|
+|PERT-large |96.2 (96.0)|96.1 (95.8)|
+| **LERT-large** |**96.3 (96.0)**|**96.3 (96.0)**|
 
 
 ### Results for Small model
@@ -201,7 +206,7 @@ A1: The PyTorch version model is converted from the original TF weights. In orde
 A2: There is no plan to train in English at the moment.
 
 
-## FAQ
+## Citation
 TBA
 
 
