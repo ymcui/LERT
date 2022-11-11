@@ -12,6 +12,7 @@
 </p>
 通常认为预训练语言模型（Pre-trained Language Model, PLM）已经能够从海量文本中自动学习语言学知识。为了验证通过显式注入语言学知识预训练模型能否获得进一步性能提升，在本项目中哈工大讯飞联合实验室（HFL）提出了一种<b>语言学信息增强的预训练模型LERT</b> ，融合了多种语言学知识。大量实验结果表明，在同等训练数据规模下，LERT能够带来显著性能提升。LERT相关资源将陆续开源，以供学术研究参考。
 
+
 - **LERT: A Linguistically-motivated Pre-trained Language Model**
 - *Yiming Cui, Wanxiang Che, Shijin Wang, Ting Liu*
 - 论文地址：https://arxiv.org/abs/2211.05344
@@ -23,9 +24,9 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-2022/11/11 本项目相关的论文已在arXiv预印本上线，地址：https://arxiv.org/abs/2211.05344
+<b>2022/11/11 本项目相关的论文已在arXiv预印本上线，地址：https://arxiv.org/abs/2211.05344 </b>
 
-2022/10/26 **模型下载链接、基线系统效果已更新**，欢迎提前下载使用。其余信息待补充。
+2022/10/26 模型下载链接、基线系统效果已更新，欢迎提前下载使用。其余信息待补充。
 
 2022/10/18 感谢各位的关注，本项目在逐渐完善内容中。
 
