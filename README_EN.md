@@ -15,8 +15,9 @@
 It is generally believed that Pre-trained Language Model (PLM) has the ability to automatically learn linguistic knowledge from large-scale text corpora. In order to verify whether the pre-trained language model can be further improved by explicitly injecting linguistic knowledge, in this project, the Joint Laboratory of HIT and iFLYTEK Research  (HFL) proposed <b>a new pre-trained model LERT</b> with enhanced linguistic information, which incorporates a variety of linguistic knowledge. Extensive experimental results show that LERT can bring significant performance improvement under the same training data scale. LERT-related resources will be open-sourced for promoting academic research.
 
 
-- **LERT: A Linguistically-motivated Pre-trained Language Model (links TBA)**
+- **LERT: A Linguistically-motivated Pre-trained Language Model**
 - *Yiming Cui, Wanxiang Che, Shijin Wang, Ting Liu*
+- Paper link: https://arxiv.org/abs/2211.05344
 
 ----
 
@@ -25,7 +26,7 @@ It is generally believed that Pre-trained Language Model (PLM) has the ability t
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
-2022/11/11 Paper has been uploaded to arXiv. Link: TBA
+2022/11/11 Paper has been uploaded to arXiv. Link: https://arxiv.org/abs/2211.05344
 
 2022/10/26 **Model download links and baseline system results have been updated**. The rest of the information will be added later.
 
@@ -44,6 +45,14 @@ View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## Introduction
 Pre-trained Language Model (PLM) has become a representative foundation model in the natural language processing ﬁeld. Most PLMs are trained with linguistic-agnostic pretraining tasks on the surface form of the text, such as the masked language model (MLM). To further empower the PLMs with richer linguistic features, in this paper, we aim to propose a simple but effective way to learn linguistic features for pre-trained language models. We propose LERT, a pre-trained language model that is trained on three types of linguistic features along with the original MLM pretraining task, using a linguistically-informed pre-training (LIP) strategy. We carried out extensive experiments on ten Chinese NLU tasks, and the experimental results show that LERT could bring signiﬁcant improvements over various comparable baselines. Furthermore, we also conduct analytical experiments in various linguistic aspects, and the results prove that the design of LERT is valid and effective.
+
+Main Contribution:
+
+- We propose a simple way to incorporate three types of linguistic features for pre-trained language models with a linguistically-informed pre-training (LIP) strategy.
+
+- With extensive and robust experiments on ten popular Chinese natural language understanding tasks, LERT yields significant improvements over comparable baselines. Several analyses also prove the effectiveness of LERT.
+
+- The resources are made publicly available to further facilitate our research community.
 
 ![](./pics/lert.png)
 
@@ -214,7 +223,18 @@ A2: There is no plan to train in English at the moment.
 
 
 ## Citation
-TBA
+If you find our work or resource useful, please consider cite our work: https://arxiv.org/abs/2211.05344
+
+```
+@article{cui2022lert,
+      title={LERT: A Linguistically-motivated Pre-trained Language Model}, 
+      author={Cui, Yiming and Che, Wanxiang and Wang, Shijin and Liu, Ting},
+      year={2022},
+      eprint={2211.05344},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 
 ## Follow us

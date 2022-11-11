@@ -12,8 +12,9 @@
 </p>
 通常认为预训练语言模型（Pre-trained Language Model, PLM）已经能够从海量文本中自动学习语言学知识。为了验证通过显式注入语言学知识预训练模型能否获得进一步性能提升，在本项目中哈工大讯飞联合实验室（HFL）提出了一种<b>语言学信息增强的预训练模型LERT</b> ，融合了多种语言学知识。大量实验结果表明，在同等训练数据规模下，LERT能够带来显著性能提升。LERT相关资源将陆续开源，以供学术研究参考。
 
-- **LERT: A Linguistically-motivated Pre-trained Language Model (links TBA)**
+- **LERT: A Linguistically-motivated Pre-trained Language Model**
 - *Yiming Cui, Wanxiang Che, Shijin Wang, Ting Liu*
+- 论文地址：https://arxiv.org/abs/2211.05344
 
 ----
 
@@ -22,7 +23,7 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-2022/11/11 本项目相关的论文已在arXiv预印本上线，地址：TBA
+2022/11/11 本项目相关的论文已在arXiv预印本上线，地址：https://arxiv.org/abs/2211.05344
 
 2022/10/26 **模型下载链接、基线系统效果已更新**，欢迎提前下载使用。其余信息待补充。
 
@@ -42,14 +43,17 @@
 ## 简介
 预训练语言模型（PLM）已经成为自然语言处理领域的一个代表性基础模型（Foundation Model）。大多数预训练模型都是在文本的表面形式上执行语言学无关的预训练任务，如掩码语言模型（MLM）。为了进一步赋予预训练模型以更丰富的语言特征，在本文中，我们旨在提出一种简单而有效的方法将语言学特征融入预训练语言模型。我们提出**语言学信息增强的预训练模型LERT**。LERT除了使用掩码语言模型来进行预训练之外，还采用了3种语言学任务进行训练。为了更好地学习语言学特征，在本文中我们提出了一种**语言学启发的预训练机制（LIP）**。 我们在十个中文自然语言理解任务进行了广泛的实验。实验结果表明，LERT相比各种可比基线带来明显的性能提升。此外，通过各种分析实验，进一步证明了LERT的有效性。
 
+**主要贡献：**
+
+- 我们提出一种融合了3种语言学特征的预训练模型LERT，并且使用了一种语言学启发的预训练机制。
+- 在10个中文自然语言理解数据集上的大量实验表明LERT能够与可比预训练基线系统获得显著性能提升。
+- 相关资源将对外公开以进一步促进相关研究。
+
 ![](./pics/lert.png)
 
 ## 模型下载
 
 ### TensorFlow 1.x版本（原版）
-
-- 这里主要提供TensorFlow 1.15版本的模型权重。如需PyTorch或者TensorFlow 2版本的模型，请看下一小节。
-- TensorFlow开源模型包含**完整权重**，包括MLM-head、linguistic-heads等。
 
 | 模型简称                           | 层数 | 隐层大小 |          注意力头          |         参数量        | Google下载 |                          百度盘下载                          |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -57,9 +61,12 @@
 | **Chinese-LERT-base**         | 12 | 768 |  12  |  ~102M  |   [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
 | **Chinese-LERT-small** | 12 | 256 | 4 | ~15M |  [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing)  | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
 
-> *训练语料：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
->
-> **参数量：仅统计transformer部分，不包含task head部分的参数量。
+相关说明：
+
+- 这里主要提供TensorFlow 1.15版本的模型权重。如需PyTorch或者TensorFlow 2版本的模型，请看下一小节。
+- TensorFlow开源模型包含**完整权重**，包括MLM-head、linguistic-heads等。
+- 训练语料：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT、PERT相同。  
+- 参数量：仅统计transformer部分，不包含task head部分的参数量。
 
 以TensorFlow版`Chinese-LERT-base`为例，下载完毕后对zip文件进行解压得到：
 
@@ -74,21 +81,23 @@ chinese_lert_base_L-12_H-768_A-12.zip
 
 ### PyTorch以及TensorFlow 2版本 
 
-- 通过🤗transformers模型库可以下载TensorFlow (v2)和PyTorch版本模型。
-- PyTorch开源版本包含MLM部分的权重，但**不包含linguistic heads**。
-
-下载方法：点击任意需要下载的模型 → 选择"Files and versions"选项卡 → 下载对应的模型文件。
-
 | 模型简称 | 模型文件大小 | transformers模型库地址（支持MLM填空交互） |
 | :------- | :---------: |  :---------- |
 | **Chinese-LERT-large** | ~1.2G | https://huggingface.co/hfl/chinese-lert-large |
 | **Chinese-LERT-base** | ~400M | https://huggingface.co/hfl/chinese-lert-base |
 | **Chinese-LERT-small** | ~60M | https://huggingface.co/hfl/chinese-lert-small |
 
+相关说明：
+
+- 下载方法：点击任意需要下载的模型 → 选择"Files and versions"选项卡 → 下载对应的模型文件。
+- 通过🤗transformers模型库可以下载TensorFlow (v2)和PyTorch版本模型。
+- PyTorch开源版本包含MLM部分的权重，但**不包含linguistic heads**。
+
 ## 快速加载
+
 由于LERT主体部分仍然是BERT结构，用户可以使用[transformers库](https://github.com/huggingface/transformers)轻松调用LERT模型。
 
-**注意：本目录中的所有模型均使用BertTokenizer以及BertModel加载。**
+**⚠️ 注意：本目录中的所有模型均使用BertTokenizer以及BertModel加载。**
 
 ```python
 from transformers import BertTokenizer, BertModel
@@ -105,11 +114,13 @@ model = BertModel.from_pretrained("MODEL_NAME")
 
 ## 基线系统效果
 论文中在以下10个任务上进行了效果测试。GitHub目录中仅显示其中一部分，完整结果请参考论文。
-- **抽取式阅读理解**（2）：[CMRC 2018（简体中文）](https://github.com/ymcui/cmrc2018)、[DRCD（繁体中文）](https://github.com/DRCKnowledgeTeam/DRCD)
-- **文本分类**（6）：
-  - **单句**（2）：[ChnSentiCorp](https://github.com/pengming617/bert_classification)、[TNEWS](https://github.com/CLUEbenchmark/CLUE)
-  - **句对**（4）：[XNLI](https://github.com/google-research/bert/blob/master/multilingual.md)、[LCQMC](http://icrc.hitsz.edu.cn/info/1037/1146.htm)、[BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html)、[OCNLI](https://github.com/CLUEbenchmark/OCNLI)
-- **命名实体识别**（2）：[MSRA-NER]()、[People's Daily（人民日报）]()
+
+| 任务类别         | 数据集                                                       |
+| ---------------- | ------------------------------------------------------------ |
+| 抽取式阅读理解   | [CMRC 2018（简体中文）](https://github.com/ymcui/cmrc2018)、[DRCD（繁体中文）](https://github.com/DRCKnowledgeTeam/DRCD) |
+| 文本分类（单句） | [ChnSentiCorp](https://github.com/pengming617/bert_classification)、[TNEWS](https://github.com/CLUEbenchmark/CLUE) |
+| 文本分类（句对） | [XNLI](https://github.com/google-research/bert/blob/master/multilingual.md)、[LCQMC](http://icrc.hitsz.edu.cn/info/1037/1146.htm)、[BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html)、[OCNLI](https://github.com/CLUEbenchmark/OCNLI) |
+| 命名实体识别     | [MSRA-NER](https://github.com/ProHiryu/bert-chinese-ner)、[People's Daily（人民日报）](https://github.com/ProHiryu/bert-chinese-ner) |
 
 实验结果表格中，
 
@@ -210,10 +221,17 @@ A2：暂时无计划在英文上训练。
 
 ## 引用
 
-如果本项目中的模型或者相关结论有助于您的研究，请引用以下文章：TBA
+如果本项目中的模型或者相关结论有助于您的研究，请引用以下文章：https://arxiv.org/abs/2211.05344
 
 ```
-bibtex to be added
+@article{cui2022lert,
+      title={LERT: A Linguistically-motivated Pre-trained Language Model}, 
+      author={Cui, Yiming and Che, Wanxiang and Wang, Shijin and Liu, Ting},
+      year={2022},
+      eprint={2211.05344},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 
