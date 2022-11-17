@@ -10,8 +10,7 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/LERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-通常认为预训练语言模型（Pre-trained Language Model, PLM）已经能够从海量文本中自动学习语言学知识。为了验证通过显式注入语言学知识预训练模型能否获得进一步性能提升，在本项目中哈工大讯飞联合实验室（HFL）提出了一种<b>语言学信息增强的预训练模型LERT</b> ，融合了多种语言学知识。大量实验结果表明，在同等训练数据规模下，LERT能够带来显著性能提升。LERT相关资源将陆续开源，以供学术研究参考。
-
+通常认为预训练语言模型（Pre-trained Language Model, PLM）已经能够从海量文本中自动学习语言学知识。为了验证通过显式注入语言学知识预训练模型能否获得进一步性能提升，在本项目中哈工大讯飞联合实验室（HFL）提出了一种<b>语言学信息增强的预训练模型LERT</b> ，融合了多种语言学知识。大量实验结果表明，在同等训练数据规模下，LERT能够带来显著性能提升。LERT相关资源将陆续开源，以供学术研究参考。   
 
 - **LERT: A Linguistically-motivated Pre-trained Language Model**
 - *Yiming Cui, Wanxiang Che, Shijin Wang, Ting Liu*
@@ -219,6 +218,15 @@ A1：PyTorch版本模型由TF原版转换而来。为了可以直接使用bert�
 
 **Q2：有英文模型供下载吗？**  
 A2：暂时无计划在英文上训练。
+
+**Q3：配置文件、词表在哪里？**  
+A3：见`src`目录，或下载对应的模型，压缩包内包含上述文件。
+
+**Q4：模型可以进行MLM预测吗？**  
+A4：可以。开放的权重包含完整的MLM权重。推荐使用huggingface在线互动demo体验：https://huggingface.co/hfl
+
+**Q5：如何预测被mask的单词的POS/NER/DEP标签？**  
+A5：见`src`目录。通过`run_pretraining.py`文件加载TF 1.15版权重（包含完整linguistic heads）即可进行语言学标签预测。每个语言学特征对应的特征列表请查看论文或`src`目录中给出的提示。
 
 ## 引用
 

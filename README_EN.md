@@ -221,6 +221,15 @@ A1: The PyTorch version model is converted from the original TF weights. In orde
 **Q2: Is there an English model for download?**  
 A2: There is no plan to train in English at the moment.
 
+**Q3: Where is the config and vocabulary file?**  
+A3：see `src` directory. Or you can directly download our models, which contain the config and vocab files.
+
+**Q4: Can LERT perform MLM prediction?**  
+A4: Yes. The released model contains MLM weights. You are welcome to use huggingface online demo: https://huggingface.co/hfl
+
+**Q5: How to predict the linguistic tags (POS/NER/DEP) for the masked token?**  
+A5: see `src` directory. You can use `run_pretraining.py` to load our TF 1.15 model (containing linguistic weights), and make predictions on each linguistic task. For detail linguistic tags, please see our paper or check the README under `src` directory.
+
 
 ## Citation
 If you find our work or resource useful, please consider cite our work: https://arxiv.org/abs/2211.05344
