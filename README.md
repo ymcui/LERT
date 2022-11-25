@@ -23,6 +23,8 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/iflytek/HFL-Anthology
 
 ## 新闻
+<b>2022/11/25 微信公众号解读发布：[查看新闻](https://mp.weixin.qq.com/s?__biz=MzU2NDQ3MTQ0MA==&mid=2247488472&idx=1&sn=f22ccb81bc97626b548be0bf208206ac&chksm=fc4b2027cb3ca931075e9730753a2f207a7091c24f6f06e72c6e63ac1c4fb41b7faf249eaf12&token=425975098&lang=zh_CN#rd) </b>
+
 <b>2022/11/11 本项目相关的论文已在arXiv预印本上线，地址：https://arxiv.org/abs/2211.05344 </b>
 
 2022/10/26 模型下载链接、基线系统效果已更新，欢迎提前下载使用。其余信息待补充。
