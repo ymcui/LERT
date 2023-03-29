@@ -26,9 +26,11 @@ It is generally believed that Pre-trained Language Model (PLM) has the ability t
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
+**Mar 28, 2023 We open-sourced Chinese LLaMA&Alpaca LLMs, which can be quickly deployed on PC. Check: https://github.com/ymcui/Chinese-LLaMA-Alpaca**
+
 2022/11/11 Paper has been uploaded to arXiv. Link: https://arxiv.org/abs/2211.05344
 
-2022/10/26 **Model download links and baseline system results have been updated**. The rest of the information will be added later.
+2022/10/26 Model download links and baseline system results have been updated. The rest of the information will be added later.
 
 2022/10/18 Thank you for your attention, this project is gradually improving the content.
 
