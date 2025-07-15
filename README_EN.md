@@ -65,11 +65,11 @@ Main Contribution:
 - The model weights of the TensorFlow 1.15 version are mainly provided here. See the next section to get models for PyTorch or TensorFlow 2.
 - The open-sourced TensorFlow models include **full weights**, including MLM-head, linguistic-heads, etc.
 
-| Model | Layers | Hidden size | Attention head | Params | Google Drive | Baidu Disk |
-| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large** | 24 | 1024 | 16 | ~325M | [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing) | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>(password: s82t) |
-| **Chinese-LERT-base** | 12 | 768 | 12 | ~102M | [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>(password: 9jgi) |
-| **Chinese-LERT-small** | 12 | 256 | 4 | ~15M | [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing) | [ [TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>(password: 4vuy) |
+| Model | Layers | Hidden size | Attention head | Params | Baidu Disk |
+| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **Chinese-LERT-large** | 24 | 1024 | 16 | ~325M | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>(password: s82t) |
+| **Chinese-LERT-base** | 12 | 768 | 12 | ~102M | [ [TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>(password: 9jgi) |
+| **Chinese-LERT-small** | 12 | 256 | 4 | ~15M | [ [TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>(password: 4vuy) |
 
 > *Training corpus: Chinese Wikipedia, other encyclopedias, news, Q&A and other data, the total number of words is 5.4B, occupying about 20G disk space, the same as MacBERT.
 >

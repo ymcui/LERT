@@ -59,11 +59,11 @@
 
 ### TensorFlow 1.x版本（原版）
 
-| 模型简称                           | 层数 | 隐层大小 |          注意力头          |         参数量        | Google下载 |                          百度盘下载                          |
-| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **Chinese-LERT-large**        | 24 | 1024 |  16  |  ~325M  |   [[TensorFlow]](https://drive.google.com/file/d/1a_OBYy6-4akWsk-9ciT5FAmsiwVONpvh/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>（密码：s82t） |
-| **Chinese-LERT-base**         | 12 | 768 |  12  |  ~102M  |   [[TensorFlow]](https://drive.google.com/file/d/1SD0P5O9NCZTJ5qOzvJo7QGyAJapNM_YS/view?usp=sharing)   | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
-| **Chinese-LERT-small** | 12 | 256 | 4 | ~15M |  [[TensorFlow]](https://drive.google.com/file/d/1CRyI58lhih5pDzajUbU6AFoFWFnJq9eA/view?usp=sharing)  | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
+| 模型简称                           | 层数 | 隐层大小 |          注意力头          |         参数量        |                          百度盘下载                          |
+| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **Chinese-LERT-large**        | 24 | 1024 |  16  |  ~325M  | [[TensorFlow]](https://pan.baidu.com/s/1pxsS3almc90DPvMXH6BMYQ?pwd=s82t)<br/>（密码：s82t） |
+| **Chinese-LERT-base**         | 12 | 768 |  12  |  ~102M  | [[TensorFlow]](https://pan.baidu.com/s/1_yb1jCDJ4s2P8OrF_5E_Tg?pwd=9jgi)<br/>（密码：9jgi） |
+| **Chinese-LERT-small** | 12 | 256 | 4 | ~15M | [[TensorFlow]](https://pan.baidu.com/s/1fBk3em8a5iCMwPLJEBq2pQ?pwd=4vuy)<br/>（密码：4vuy） |
 
 相关说明：
 
